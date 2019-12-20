@@ -1,0 +1,65 @@
+{% extends 'temp.html' %}
+
+{% block content %}
+
+<div class="container-fluid text-center">
+
+<h1 class="mt-5 mb-5">FORM</h1>
+
+<div class="row">
+	<div class="col-sm-10 col-md-7 col-lg-5 m-auto">
+		<form method="POST">
+			{% csrf_token %}
+
+			
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+			    	<span class="input-group-text" id="basic-addon1">Name</span>
+			 	</div>
+			  	{{form.name}}
+			</div>
+
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+			    	<span class="input-group-text" id="basic-addon1">E-mail</span>
+			 	</div>
+			 	 {{form.email}}
+			</div>
+
+
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+			    	<span class="input-group-text" id="basic-addon1">Phone number</span>
+			 	</div>
+			  	{{form.phone}}
+			</div>
+
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+			    	<span class="input-group-text" id="basic-addon1">Your Age</span>
+			 	</div>
+			  	{{form.age}}
+			</div>
+
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+			  </div>
+			  {{form.gender}}
+			</div>
+
+			<div class="input-group">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text">Comment</span>
+			  </div>
+			  {{form.comment}}
+			</div>
+
+
+
+			<button type="submit" class="btn btn-primary mt-2 col">Submit</button>
+		</form>
+	</div>
+</div>
+</div>
+{% endblock %}
